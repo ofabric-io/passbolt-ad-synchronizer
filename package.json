@@ -10,10 +10,10 @@
     "clean": "gts clean",
     "compile": "tsc",
     "fix": "gts fix",
-    "prepare": "npm run compile",
     "pretest": "npm run compile",
     "posttest": "npm run lint",
-    "start:dev": "npm run compile && node ./build/index.js"
+    "start:dev": "npm run compile && node ./build/index.js",
+    "start:prod": "node ./build/index.js"
   },
   "dependencies": {
     "@azure/identity": "^4.0.0",

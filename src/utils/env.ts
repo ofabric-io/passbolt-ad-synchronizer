@@ -3,8 +3,8 @@ import {logger} from './logger';
 
 dotenv.config();
 
-export function validateEnv(requiredVariables: string[]): void {
-  const parsedEnv = dotenv.config().parsed as Object;
+export async function validateEnv(requiredVariables: string[]): Promise<void> {
+  const parsedEnv = process.env;
 
   // Check if all required variables are present
   const missingVariables = requiredVariables.filter(
