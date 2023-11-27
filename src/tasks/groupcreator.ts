@@ -20,7 +20,7 @@ export const GroupCreator = new CronJob('*/6 * * * *', async () => {
       if (!findGroup) {
         passbolt.createGroup(
           group.displayName.replace('PASSBOLT_', ''),
-          '537cb381-893e-4da6-90e0-c4d7f33bbc3a'
+          process.env.PASSBOLT_USER_ID as string
         );
       }
     }
